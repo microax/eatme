@@ -213,7 +213,7 @@ function adminUserUpdate($id)
     $user[0]->userFirstName= getRequest("first");
     $user[0]->userLastName = getRequest("last");
     $user[0]->userPhone    = getRequest("phone");
-    $user[0]->userEmail    = user[0]->userName;
+    $user[0]->userEmail    = $user[0]->userName;
     $user[0]->userModified = sqlNow();
     $user[0]->userLastLogin= sqlNow();
     $db->update($user[0]);
